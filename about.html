@@ -5,23 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>About — CodingGeh</title>
     <meta name="description" content="About CodingGeh." />
+    <link rel="canonical" href="https://coding-geh.github.io/codinggeh-portfolio/about.html" />
+    <link rel="alternate" hreflang="en" href="https://coding-geh.github.io/codinggeh-portfolio/about.html?lang=en" />
+    <link rel="alternate" hreflang="id" href="https://coding-geh.github.io/codinggeh-portfolio/about.html?lang=id" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="About — CodingGeh" />
+    <meta property="og:description" content="About CodingGeh." />
+    <meta property="og:url" content="https://coding-geh.github.io/codinggeh-portfolio/about.html" />
+    <meta property="og:image" content="og-image.svg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="./">CodingGeh</a>
+        <a class="brand" href="./"><span class="logo">CG</span><span class="brand-text">CodingGeh</span></a>
         <nav class="nav">
           <a href="./about.html" class="active">About</a>
           <a href="./projects.html">Projects</a>
           <a href="./contact.html">Contact</a>
         </nav>
+        <div class="header-actions">
+          <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+          <button id="menuToggle" class="menu-btn" aria-label="Open menu" aria-controls="navDrawer" aria-expanded="false"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+        </div>
       </div>
     </header>
+    <div id="backdrop" class="backdrop" hidden></div>
+    <nav id="navDrawer" class="nav-drawer" aria-label="Mobile Navigation">
+      <button id="drawerClose" class="drawer-close" aria-label="Close menu" title="Close">×</button>
+      <a href="./about.html" class="active">About</a>
+      <a href="./projects.html">Projects</a>
+      <a href="./contact.html" class="btn">Contact</a>
+    </nav>
     <main class="container">
       <section class="section">
         <h1>About</h1>
         <p>We build simple, minimal, production-ready web experiences with a focus on performance, accessibility, and clarity.</p>
+      </section>
+
+      <section class="section alt">
+        <h2 class="section-title">What I Do</h2>
+        <div class="features-grid">
+          <article class="card reveal"><h3>Frontend</h3><p>Clean, accessible UI with thoughtful micro-interactions.</p></article>
+          <article class="card reveal"><h3>Site Performance</h3><p>Core Web Vitals improvements with metrics you can see.</p></article>
+          <article class="card reveal"><h3>SEO</h3><p>Structured data, sitemaps, canonical, hreflang.</p></article>
+          <article class="card reveal"><h3>Tooling</h3><p>CI for Pages, automated checks, and simple DX.</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Values</h2>
+        <div class="chips">
+          <span class="chip">Clarity</span>
+          <span class="chip">Simplicity</span>
+          <span class="chip">Performance</span>
+          <span class="chip">Accessibility</span>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <h2 class="section-title">Timeline</h2>
+        <ol class="timeline">
+          <li><span class="t-year">2025</span><div><strong>Static Portfolio Suite</strong> — Shipped multi-site static projects with Pages CI.</div></li>
+          <li><span class="t-year">2024</span><div><strong>SEO Enhancements</strong> — Implemented JSON-LD and indexing strategies.</div></li>
+          <li><span class="t-year">2023</span><div><strong>Design Systems</strong> — Built consistent UI kits and theming systems.</div></li>
+        </ol>
       </section>
     </main>
     <footer class="site-footer"><div class="container footer-inner">© <span id="year"></span> CodingGeh</div></footer>

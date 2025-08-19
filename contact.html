@@ -5,19 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact — CodingGeh</title>
     <meta name="description" content="Contact CodingGeh." />
+    <link rel="canonical" href="https://coding-geh.github.io/codinggeh-portfolio/contact.html" />
+    <link rel="alternate" hreflang="en" href="https://coding-geh.github.io/codinggeh-portfolio/contact.html?lang=en" />
+    <link rel="alternate" hreflang="id" href="https://coding-geh.github.io/codinggeh-portfolio/contact.html?lang=id" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="./">CodingGeh</a>
+        <a class="brand" href="./"><span class="logo">CG</span><span class="brand-text">CodingGeh</span></a>
         <nav class="nav">
           <a href="./about.html">About</a>
           <a href="./projects.html">Projects</a>
           <a href="./contact.html" class="active">Contact</a>
         </nav>
+        <div class="header-actions">
+          <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+          <button id="menuToggle" class="menu-btn" aria-label="Open menu" aria-controls="navDrawer" aria-expanded="false"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+        </div>
       </div>
     </header>
+    <div id="backdrop" class="backdrop" hidden></div>
+    <nav id="navDrawer" class="nav-drawer" aria-label="Mobile Navigation">
+      <button id="drawerClose" class="drawer-close" aria-label="Close menu" title="Close">×</button>
+      <a href="./about.html">About</a>
+      <a href="./projects.html">Projects</a>
+      <a href="./contact.html" class="active btn">Contact</a>
+    </nav>
     <main class="container">
       <section class="section">
         <h1>Contact</h1>
@@ -29,6 +43,13 @@
           <label class="field"><span>Message</span><textarea name="message" required rows="4" placeholder="Tell us what you need"></textarea><small class="error">Required</small></label>
           <div class="form-actions"><button class="btn btn-primary" type="submit">Send</button><p id="formStatus" role="status" aria-live="polite"></p></div>
         </form>
+      </section>
+
+      <section class="section alt">
+        <h2 class="section-title">FAQ</h2>
+        <details class="faq"><summary>Do you handle SEO?</summary><p>Yes, from semantic markup to JSON-LD and sitemaps.</p></details>
+        <details class="faq"><summary>Do you set up Pages CI?</summary><p>Yes, GitHub Actions workflow included.</p></details>
+        <details class="faq"><summary>Do you support i18n?</summary><p>English and Indonesian are included by default.</p></details>
       </section>
     </main>
     <footer class="site-footer"><div class="container footer-inner">© <span id="year"></span> CodingGeh</div></footer>

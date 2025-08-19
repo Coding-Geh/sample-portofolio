@@ -79,4 +79,8 @@ html,body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-se
 .field .error{display:none;color:#ff8585}
 .field.invalid .error{display:inline}
 .form-actions{display:flex;gap:12px;align-items:center}
+.timeline{list-style:none;padding:0;display:grid;gap:12px}
+.t-year{display:inline-block;min-width:64px;border:1px solid var(--border);background:var(--card);border-radius:999px;padding:6px 10px;margin-right:8px;color:var(--muted)}
+.case-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.case-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px}
 
