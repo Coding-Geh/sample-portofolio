@@ -13,4 +13,13 @@ document.getElementById('year')?.append(String(new Date().getFullYear()));
 // Contact page validation
 (function(){const f=document.getElementById('contactForm');const s=document.getElementById('formStatus');if(!f||!s)return;const setInv=(el,b)=>el.classList.toggle('invalid',b);f.addEventListener('submit',(e)=>{e.preventDefault();const fd=new FormData(f);const n=String(fd.get('name')||'').trim();const em=String(fd.get('email')||'').trim();const m=String(fd.get('message')||'').trim();const nf=f.querySelector('input[name="name"]').closest('.field');const ef=f.querySelector('input[name="email"]').closest('.field');const mf=f.querySelector('textarea[name="message"]').closest('.field');const invN=n.length===0,invE=!/.+@.+\..+/.test(em),invM=m.length===0;setInv(nf,invN);setInv(ef,invE);setInv(mf,invM);if(invN||invE||invM){s.textContent='Please check your inputs.';return;}s.textContent='Sent! (demo)';f.reset();});})();
 
+// Reveal on scroll
+(function(){const els=document.querySelectorAll('.reveal');if(!('IntersectionObserver'in window)||els.length===0){els.forEach(e=>e.classList.add('show'));return;}const io=new IntersectionObserver((es)=>{for(const en of es){if(en.isIntersecting){en.target.classList.add('show');io.unobserve(en.target);}}},{threshold:.15});els.forEach(e=>io.observe(e));})();
+
+// Testimonials auto-rotate
+(function(){const root=document.getElementById('testimonials');if(!root) return;const items=Array.from(root.querySelectorAll('.t-item'));let i=0;setInterval(()=>{items[i].classList.remove('show');i=(i+1)%items.length;items[i].classList.add('show');},4000);})();
+
+// Back to top
+(function(){const btn=document.getElementById('backToTop');if(!btn) return;btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));window.addEventListener('scroll',()=>{btn.style.display=window.scrollY>320?'block':'none'});btn.style.display='none';})();
+
 
