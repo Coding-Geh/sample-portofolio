@@ -3,15 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CodingGeh — Portfolio</title>
-    <meta name="description" content="Personal portfolio of CodingGeh. Clean, fast, modern web projects." />
+    <title data-i18n="meta.title">CodingGeh — Portfolio</title>
+    <meta name="description" content="Personal portfolio of CodingGeh. Clean, fast, modern web projects." data-i18n="meta.description" />
     <meta name="robots" content="index,follow" />
     <meta name="theme-color" content="#6c5ce7" />
-    <link rel="canonical" id="canonical" href="." />
+    <link rel="canonical" id="canonical" href="https://coding-geh.github.io/codinggeh-portfolio/" />
+    <link rel="alternate" hreflang="en" id="alt-en" href="https://coding-geh.github.io/codinggeh-portfolio/?lang=en" />
+    <link rel="alternate" hreflang="id" id="alt-id" href="https://coding-geh.github.io/codinggeh-portfolio/?lang=id" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="CodingGeh — Portfolio" />
     <meta property="og:description" content="Personal portfolio of CodingGeh. Clean, fast, modern web projects." />
-    <meta property="og:url" id="ogUrl" content="." />
+    <meta property="og:url" id="ogUrl" content="https://coding-geh.github.io/codinggeh-portfolio/" />
     <meta property="og:image" content="og-image.svg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="CodingGeh — Portfolio" />
@@ -38,15 +40,16 @@
       <div class="container header-inner">
         <a class="brand" href="./" aria-label="CodingGeh Portfolio">
           <span class="logo">CG</span>
-          <span class="brand-text">CodingGeh</span>
+          <span class="brand-text" data-i18n="brand">CodingGeh</span>
         </a>
         <nav class="nav">
-          <a href="./about.html">About</a>
-          <a href="./projects.html">Projects</a>
-          <a href="./contact.html">Contact</a>
+          <a href="./about.html" data-i18n="nav.about">About</a>
+          <a href="./projects.html" data-i18n="nav.projects">Projects</a>
+          <a href="./contact.html" data-i18n="nav.contact">Contact</a>
         </nav>
         <div class="header-actions">
           <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+          <button id="langToggle" class="lang-btn" aria-label="Switch language" title="Switch language">EN</button>
           <button id="menuToggle" class="menu-btn" aria-label="Open menu" aria-controls="navDrawer" aria-expanded="false">
             <span class="bar"></span><span class="bar"></span><span class="bar"></span>
           </button>
@@ -56,20 +59,20 @@
     <div id="backdrop" class="backdrop" hidden></div>
     <nav id="navDrawer" class="nav-drawer" aria-label="Mobile Navigation">
       <button id="drawerClose" class="drawer-close" aria-label="Close menu" title="Close">×</button>
-      <a href="./about.html">About</a>
-      <a href="./projects.html">Projects</a>
-      <a href="./contact.html" class="btn">Contact</a>
+      <a href="./about.html" data-i18n="nav.about">About</a>
+      <a href="./projects.html" data-i18n="nav.projects">Projects</a>
+      <a href="./contact.html" class="btn" data-i18n="nav.contact">Contact</a>
     </nav>
 
     <main>
       <section class="hero">
         <div class="container grid-2">
           <div class="hero-copy">
-            <h1>Clean, Fast, Modern.</h1>
-            <p class="lead">I build minimal, production-ready web experiences with a focus on performance and clarity.</p>
+            <h1 data-i18n="hero.title">Clean, Fast, Modern.</h1>
+            <p class="lead" data-i18n="hero.lead">I build minimal, production-ready web experiences with a focus on performance and clarity.</p>
             <div class="hero-cta">
-              <a href="./projects.html" class="btn btn-primary">See Projects</a>
-              <a href="./contact.html" class="btn btn-ghost">Get in Touch</a>
+              <a href="./projects.html" class="btn btn-primary" data-i18n="hero.cta.projects">See Projects</a>
+              <a href="./contact.html" class="btn btn-ghost" data-i18n="hero.cta.contact">Get in Touch</a>
             </div>
           </div>
           <div class="hero-art" aria-hidden="true">
@@ -84,7 +87,7 @@
 
       <section class="section">
         <div class="container">
-          <h2 class="section-title">Featured Projects</h2>
+          <h2 class="section-title" data-i18n="sections.featured">Featured Projects</h2>
           <div class="features-grid">
             <article class="card reveal"><h3>Static Landing</h3><p>SEO-ready static site with dark mode and i18n.</p></article>
             <article class="card reveal"><h3>Link in Bio</h3><p>Minimal links page with custom theme and schema.</p></article>
@@ -96,7 +99,7 @@
 
       <section class="section alt">
         <div class="container">
-          <h2 class="section-title">Skills & Tools</h2>
+          <h2 class="section-title" data-i18n="sections.skills">Skills & Tools</h2>
           <div class="chips">
             <span class="chip">HTML5</span>
             <span class="chip">CSS3</span>
@@ -112,22 +115,22 @@
 
       <section class="section">
         <div class="container">
-          <h2 class="section-title">Services</h2>
+          <h2 class="section-title" data-i18n="sections.services">Services</h2>
           <div class="services-grid">
             <article class="service reveal">
               <div class="service-icon">⚡</div>
-              <h3>Landing Pages</h3>
-              <p>Blazing-fast, SEO-optimized, and production-ready landing pages.</p>
+              <h3 data-i18n="services.landing.title">Landing Pages</h3>
+              <p data-i18n="services.landing.body">Blazing-fast, SEO-optimized, and production-ready landing pages.</p>
             </article>
             <article class="service reveal">
               <div class="service-icon">🧭</div>
-              <h3>Design to Code</h3>
-              <p>Pixel-perfect conversion from Figma to accessible, maintainable code.</p>
+              <h3 data-i18n="services.design.title">Design to Code</h3>
+              <p data-i18n="services.design.body">Pixel-perfect conversion from Figma to accessible, maintainable code.</p>
             </article>
             <article class="service reveal">
               <div class="service-icon">🔍</div>
-              <h3>SEO & Analytics</h3>
-              <p>Semantic markup, structured data, sitemaps, and privacy-friendly analytics.</p>
+              <h3 data-i18n="services.seo.title">SEO & Analytics</h3>
+              <p data-i18n="services.seo.body">Semantic markup, structured data, sitemaps, and privacy-friendly analytics.</p>
             </article>
           </div>
         </div>
@@ -135,19 +138,19 @@
 
       <section class="section alt">
         <div class="container">
-          <h2 class="section-title">Testimonials</h2>
+          <h2 class="section-title" data-i18n="sections.testimonials">Testimonials</h2>
           <div class="testimonials" id="testimonials">
             <figure class="t-item show">
-              <blockquote>Clean code, fast delivery, and thoughtful UX. Exactly what we needed.</blockquote>
-              <figcaption>— Client A</figcaption>
+              <blockquote data-i18n="testimonials.1.body">Clean code, fast delivery, and thoughtful UX. Exactly what we needed.</blockquote>
+              <figcaption data-i18n="testimonials.1.by">— Client A</figcaption>
             </figure>
             <figure class="t-item">
-              <blockquote>Our site loads instantly and ranks better. Great attention to SEO details.</blockquote>
-              <figcaption>— Client B</figcaption>
+              <blockquote data-i18n="testimonials.2.body">Our site loads instantly and ranks better. Great attention to SEO details.</blockquote>
+              <figcaption data-i18n="testimonials.2.by">— Client B</figcaption>
             </figure>
             <figure class="t-item">
-              <blockquote>Seamless GitHub Pages setup with CI. Documentation was on point.</blockquote>
-              <figcaption>— Client C</figcaption>
+              <blockquote data-i18n="testimonials.3.body">Seamless GitHub Pages setup with CI. Documentation was on point.</blockquote>
+              <figcaption data-i18n="testimonials.3.by">— Client C</figcaption>
             </figure>
           </div>
         </div>
@@ -155,22 +158,22 @@
 
       <section class="section">
         <div class="container">
-          <h2 class="section-title">Blog</h2>
+          <h2 class="section-title" data-i18n="sections.blog">Blog</h2>
           <div class="blog-grid">
             <article class="blog-card reveal">
-              <h3>Optimizing Static Sites for SEO</h3>
-              <p>Canonical URLs, JSON-LD, sitemaps, and practical indexing tips.</p>
-              <a class="link" href="#">Read more →</a>
+              <h3 data-i18n="blog.1.title">Optimizing Static Sites for SEO</h3>
+              <p data-i18n="blog.1.body">Canonical URLs, JSON-LD, sitemaps, and practical indexing tips.</p>
+              <a class="link" href="#" data-i18n="blog.1.cta">Read more →</a>
             </article>
             <article class="blog-card reveal">
-              <h3>Dark Mode the Right Way</h3>
-              <p>OS preference, localStorage, and accessible contrast considerations.</p>
-              <a class="link" href="#">Read more →</a>
+              <h3 data-i18n="blog.2.title">Dark Mode the Right Way</h3>
+              <p data-i18n="blog.2.body">OS preference, localStorage, and accessible contrast considerations.</p>
+              <a class="link" href="#" data-i18n="blog.2.cta">Read more →</a>
             </article>
             <article class="blog-card reveal">
-              <h3>GitHub Pages CI in Minutes</h3>
-              <p>Ship with Actions: from main push to live deployment safely.</p>
-              <a class="link" href="#">Read more →</a>
+              <h3 data-i18n="blog.3.title">GitHub Pages CI in Minutes</h3>
+              <p data-i18n="blog.3.body">Ship with Actions: from main push to live deployment safely.</p>
+              <a class="link" href="#" data-i18n="blog.3.cta">Read more →</a>
             </article>
           </div>
         </div>
@@ -178,16 +181,16 @@
 
       <section class="section alt">
         <div class="container cta">
-          <h2>Have an idea in mind?</h2>
-          <p class="lead">Let’s turn it into a clean, fast, and modern experience.</p>
-          <a class="btn btn-primary" href="./contact.html">Contact Me</a>
+          <h2 data-i18n="cta.title">Have an idea in mind?</h2>
+          <p class="lead" data-i18n="cta.lead">Let’s turn it into a clean, fast, and modern experience.</p>
+          <a class="btn btn-primary" href="./contact.html" data-i18n="cta.button">Contact Me</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p>© <span id="year"></span> CodingGeh. All rights reserved.</p>
+        <p>© <span id="year"></span> <span data-i18n="brand">CodingGeh</span>. <span data-i18n="footer.rights">All rights reserved.</span></p>
       </div>
     </footer>
 
