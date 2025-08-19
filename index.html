@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CodingGeh — Portfolio</title>
+    <meta name="description" content="Personal portfolio of CodingGeh. Clean, fast, modern web projects." />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#6c5ce7" />
+    <link rel="canonical" id="canonical" href="." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="CodingGeh — Portfolio" />
+    <meta property="og:description" content="Personal portfolio of CodingGeh. Clean, fast, modern web projects." />
+    <meta property="og:url" id="ogUrl" content="." />
+    <meta property="og:image" content="og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CodingGeh — Portfolio" />
+    <meta name="twitter:description" content="Personal portfolio of CodingGeh. Clean, fast, modern web projects." />
+    <meta name="twitter:image" content="og-image.svg" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23433cff'/><text x='50' y='58' font-size='42' text-anchor='middle' fill='%23fff' font-family='Arial'>C</text></svg>">
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json" id="ld-json">{
+      "@context":"https://schema.org",
+      "@type":"Person",
+      "name":"CodingGeh",
+      "url":".",
+      "sameAs":["https://github.com/Coding-Geh"]
+    }</script>
+    <script type="application/ld+json" id="ld-website">{
+      "@context":"https://schema.org",
+      "@type":"WebSite",
+      "name":"CodingGeh Portfolio",
+      "url":"."
+    }</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./" aria-label="CodingGeh Portfolio">
+          <span class="logo">CG</span>
+          <span class="brand-text">CodingGeh</span>
+        </a>
+        <nav class="nav">
+          <a href="./about.html">About</a>
+          <a href="./projects.html">Projects</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+          <button id="menuToggle" class="menu-btn" aria-label="Open menu" aria-controls="navDrawer" aria-expanded="false">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div id="backdrop" class="backdrop" hidden></div>
+    <nav id="navDrawer" class="nav-drawer" aria-label="Mobile Navigation">
+      <button id="drawerClose" class="drawer-close" aria-label="Close menu" title="Close">×</button>
+      <a href="./about.html">About</a>
+      <a href="./projects.html">Projects</a>
+      <a href="./contact.html" class="btn">Contact</a>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div class="container grid-2">
+          <div class="hero-copy">
+            <h1>Clean, Fast, Modern.</h1>
+            <p class="lead">I build minimal, production-ready web experiences with a focus on performance and clarity.</p>
+            <div class="hero-cta">
+              <a href="./projects.html" class="btn btn-primary">See Projects</a>
+              <a href="./contact.html" class="btn btn-ghost">Get in Touch</a>
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="glass-card">
+              <div class="gc-line"><span class="gc-dot"></span><span class="gc-bar" style="--w:76%"></span></div>
+              <div class="gc-line"><span class="gc-dot"></span><span class="gc-bar" style="--w:54%"></span></div>
+              <div class="gc-line"><span class="gc-dot"></span><span class="gc-bar" style="--w:92%"></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="features-grid">
+            <article class="card"><h3>Static Landing</h3><p>SEO-ready static site with dark mode and i18n.</p></article>
+            <article class="card"><h3>Link in Bio</h3><p>Minimal links page with custom theme and schema.</p></article>
+            <article class="card"><h3>QR Generator</h3><p>Client-side QR generator with PNG/SVG export.</p></article>
+            <article class="card"><h3>Waitlist</h3><p>Coming soon landing with countdown and email capture.</p></article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> CodingGeh. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
+

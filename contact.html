@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — CodingGeh</title>
+    <meta name="description" content="Contact CodingGeh." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./">CodingGeh</a>
+        <nav class="nav">
+          <a href="./about.html">About</a>
+          <a href="./projects.html">Projects</a>
+          <a href="./contact.html" class="active">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <section class="section">
+        <h1>Contact</h1>
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="form-grid">
+            <label class="field"><span>Name</span><input name="name" required placeholder="Your name" /><small class="error">Required</small></label>
+            <label class="field"><span>Email</span><input name="email" type="email" required placeholder="email@example.com" /><small class="error">Invalid email</small></label>
+          </div>
+          <label class="field"><span>Message</span><textarea name="message" required rows="4" placeholder="Tell us what you need"></textarea><small class="error">Required</small></label>
+          <div class="form-actions"><button class="btn btn-primary" type="submit">Send</button><p id="formStatus" role="status" aria-live="polite"></p></div>
+        </form>
+      </section>
+    </main>
+    <footer class="site-footer"><div class="container footer-inner">© <span id="year"></span> CodingGeh</div></footer>
+    <script src="script.js"></script>
+  </body>
+  </html>
+
+
