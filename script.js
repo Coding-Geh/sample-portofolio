@@ -43,4 +43,9 @@ document.getElementById('alt-id')?.setAttribute('href','https://coding-geh.githu
 // Count-up stats
 (function(){const nums=document.querySelectorAll('.stat .num');if(nums.length===0)return;const io=new IntersectionObserver((es)=>{for(const en of es){if(!en.isIntersecting) continue;const el=en.target;const t=String(el.getAttribute('data-target')||'0').replace(/[^0-9]/g,'');const target=parseInt(t,10)||0;let cur=0;const step=Math.max(1,Math.floor(target/60));const id=setInterval(()=>{cur+=step;if(cur>=target){cur=target;clearInterval(id)}el.textContent=String(cur)},16);io.unobserve(el)}});nums.forEach(n=>io.observe(n));})();
 
+// Projects filter/search
+(function(){const grid=document.getElementById('grid');const search=document.getElementById('search');if(!grid) return;const cards=[...grid.children];let tag='all';function apply(){const q=(search?.value||'').toLowerCase();cards.forEach(c=>{const okTag= tag==='all' || (c.getAttribute('data-tags')||'').includes(tag);const okQ= c.textContent.toLowerCase().includes(q);c.style.display= (okTag && okQ)?'block':'none';});}
+document.querySelectorAll('.chips .chip').forEach(ch=>{if(!ch.dataset.tag) return;ch.setAttribute('role','button');ch.addEventListener('click',()=>{document.querySelectorAll('.chips .chip').forEach(x=>x.classList.remove('active'));ch.classList.add('active');tag=ch.dataset.tag;apply();});});
+search?.addEventListener('input',apply);})();
+
 
