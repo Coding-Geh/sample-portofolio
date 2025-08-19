@@ -113,6 +113,15 @@
         </div>
       </section>
 
+      <section class="stats">
+        <div class="container stats-inner">
+          <div class="stat"><span class="num" data-target="100">0</span><small data-i18n="stats.lighthouse">Lighthouse</small></div>
+          <div class="stat"><span class="num" data-target="<97">0</span><small data-i18n="stats.performance">Performance</small></div>
+          <div class="stat"><span class="num" data-target="20">0</span><small data-i18n="stats.projects">Projects</small></div>
+          <div class="stat"><span class="num" data-target="7">0</span><small data-i18n="stats.years">Years</small></div>
+        </div>
+      </section>
+
       <section class="section">
         <div class="container">
           <h2 class="section-title" data-i18n="sections.services">Services</h2>
@@ -131,6 +140,29 @@
               <div class="service-icon">🔍</div>
               <h3 data-i18n="services.seo.title">SEO & Analytics</h3>
               <p data-i18n="services.seo.body">Semantic markup, structured data, sitemaps, and privacy-friendly analytics.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title" data-i18n="sections.cases">Case Studies</h2>
+          <div class="case-grid">
+            <article class="case-card reveal">
+              <h3>Edu Platform</h3>
+              <p>Reduced LCP from 4.2s to 1.3s by optimizing critical CSS and asset strategy.</p>
+              <a class="link" href="#">Explore →</a>
+            </article>
+            <article class="case-card reveal">
+              <h3>Fintech Landing</h3>
+              <p>+38% signup rate after refactoring IA and adding structured data.</p>
+              <a class="link" href="#">Explore →</a>
+            </article>
+            <article class="case-card reveal">
+              <h3>SaaS Docs</h3>
+              <p>Migration to static docs with search and anchor deep-links.</p>
+              <a class="link" href="#">Explore →</a>
             </article>
           </div>
         </div>
@@ -184,6 +216,11 @@
           <h2 data-i18n="cta.title">Have an idea in mind?</h2>
           <p class="lead" data-i18n="cta.lead">Let’s turn it into a clean, fast, and modern experience.</p>
           <a class="btn btn-primary" href="./contact.html" data-i18n="cta.button">Contact Me</a>
+          <div class="socials">
+            <a href="https://github.com/Coding-Geh" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+            <a href="#" aria-label="Twitter">Twitter/X</a>
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          </div>
         </div>
       </section>
     </main>
@@ -191,10 +228,33 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <p>© <span id="year"></span> <span data-i18n="brand">CodingGeh</span>. <span data-i18n="footer.rights">All rights reserved.</span></p>
+        <nav class="foot-nav">
+          <a href="./about.html" data-i18n="nav.about">About</a>
+          <a href="./projects.html" data-i18n="nav.projects">Projects</a>
+          <a href="./contact.html" data-i18n="nav.contact">Contact</a>
+        </nav>
       </div>
     </footer>
 
     <button id="backToTop" class="backtotop" aria-label="Back to top">↑</button>
+
+    <script type="application/ld+json" id="ld-breadcrumb">{
+      "@context":"https://schema.org",
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://coding-geh.github.io/codinggeh-portfolio/"},
+        {"@type":"ListItem","position":2,"name":"Projects","item":"https://coding-geh.github.io/codinggeh-portfolio/projects.html"}
+      ]
+    }</script>
+    <script type="application/ld+json" id="ld-faq">{
+      "@context":"https://schema.org",
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Do you handle SEO?","acceptedAnswer":{"@type":"Answer","text":"Yes, from semantic markup to JSON-LD and sitemaps."}},
+        {"@type":"Question","name":"Do you set up GitHub Pages?","acceptedAnswer":{"@type":"Answer","text":"Yes, with CI workflows for automatic deployments."}},
+        {"@type":"Question","name":"Do you support i18n?","acceptedAnswer":{"@type":"Answer","text":"Yes, English and Indonesian out of the box."}}
+      ]
+    }</script>
 
     <script src="script.js"></script>
   </body>

@@ -37,4 +37,10 @@ document.getElementById('alt-id')?.setAttribute('href','https://coding-geh.githu
 // Back to top
 (function(){const btn=document.getElementById('backToTop');if(!btn) return;btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));window.addEventListener('scroll',()=>{btn.style.display=window.scrollY>320?'block':'none'});btn.style.display='none';})();
 
+// Header shadow on scroll
+(function(){const h=document.querySelector('.site-header');if(!h) return;window.addEventListener('scroll',()=>{h.style.boxShadow=window.scrollY>8?'0 2px 12px rgba(0,0,0,.12)':'none'});})();
+
+// Count-up stats
+(function(){const nums=document.querySelectorAll('.stat .num');if(nums.length===0)return;const io=new IntersectionObserver((es)=>{for(const en of es){if(!en.isIntersecting) continue;const el=en.target;const t=String(el.getAttribute('data-target')||'0').replace(/[^0-9]/g,'');const target=parseInt(t,10)||0;let cur=0;const step=Math.max(1,Math.floor(target/60));const id=setInterval(()=>{cur+=step;if(cur>=target){cur=target;clearInterval(id)}el.textContent=String(cur)},16);io.unobserve(el)}});nums.forEach(n=>io.observe(n));})();
+
 
