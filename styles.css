@@ -19,12 +19,13 @@ html,body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-se
 @media(min-width:920px){.nav{display:flex}.menu-btn{display:none}}
 .backdrop{position:fixed;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(2px);opacity:0;pointer-events:none;transition:opacity .25s;z-index:70}
 .backdrop.show{opacity:1;pointer-events:auto}
-.nav-drawer{position:fixed;inset:0 0 0 auto;width:min(90vw,400px);background:var(--card);border-left:1px solid var(--border);transform:translateX(100%);transition:transform .28s;display:flex;flex-direction:column;gap:12px;padding:28px;z-index:80;padding-top:calc(28px + env(safe-area-inset-top, 0px));padding-bottom:calc(28px + env(safe-area-inset-bottom, 0px))}
+.nav-drawer{position:fixed;inset:0 0 0 auto;width:min(90vw,400px);background:var(--card);border-left:1px solid var(--border);transform:translateX(100%);transition:transform .28s;display:flex;flex-direction:column;z-index:80;padding-top:calc(28px + env(safe-area-inset-top, 0px));padding-bottom:calc(28px + env(safe-area-inset-bottom, 0px))}
 .nav-drawer.show{transform:translateX(0)}
-.nav-drawer a{display:block;width:100%;text-decoration:none;color:var(--text);padding:16px 20px;border-radius:16px;border:1px solid transparent;font-size:16px;font-weight:500}
-.nav-drawer a:hover{background:color-mix(in oklab,var(--surface) 70%,transparent);border-color:var(--border)}
-.drawer-close{align-self:flex-end;border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:12px;width:44px;height:44px;font-size:20px;font-weight:600}
-.drawer-actions{display:flex;gap:8px;margin-top:auto;padding-top:16px;border-top:1px solid var(--border)}
+.nav-drawer a{display:block;width:100%;text-decoration:none;color:var(--text);padding:16px 28px;border-radius:0;border:1px solid transparent;font-size:16px;font-weight:500;border-left:3px solid transparent}
+.nav-drawer a:hover{background:color-mix(in oklab,var(--surface) 70%,transparent);border-left-color:var(--primary)}
+.nav-drawer a.active{border-left-color:var(--primary);background:color-mix(in oklab,var(--surface) 50%,transparent)}
+.drawer-close{align-self:flex-end;border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:12px;width:44px;height:44px;font-size:20px;font-weight:600;margin:0 28px 24px 0}
+.drawer-actions{display:flex;gap:8px;margin-top:auto;padding:28px;border-top:1px solid var(--border)}
 .grid-2{display:grid;grid-template-columns:1fr;gap:28px}
 @media(min-width:920px){.grid-2{grid-template-columns:1.1fr .9fr;align-items:center}}
 .hero{padding:100px 0 60px;background:linear-gradient(180deg, color-mix(in oklab, var(--surface) 50%, transparent), transparent 60%)}
