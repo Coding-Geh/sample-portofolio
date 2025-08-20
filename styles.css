@@ -12,9 +12,9 @@ html,body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-se
 .nav{display:none;gap:18px}
 .nav a{text-decoration:none;color:var(--text);opacity:.9}
 .nav a.active,.nav a:hover{opacity:1;color:var(--primary)}
-.icon-btn{border:1px solid var(--border);background:var(--card);color:var(--text);border-radius:12px;padding:0;font-size:16px;width:36px;height:36px;display:flex;align-items:center;justify-content:center}
-.lang-btn{border:1px solid var(--border);background:var(--card);color:var(--text);border-radius:12px;padding:0;font-size:14px;font-weight:500;width:36px;height:36px;display:flex;align-items:center;justify-content:center}
-.menu-btn{display:inline-flex;flex-direction:column;gap:3px;border:1px solid var(--border);background:var(--card);border-radius:12px;width:36px;height:36px;justify-content:center;align-items:center}
+.icon-btn{border:1px solid var(--border);background:var(--card);color:var(--text);border-radius:12px;padding:0;font-size:16px;width:44px;height:44px;display:flex;align-items:center;justify-content:center}
+.lang-btn{border:1px solid var(--border);background:var(--card);color:var(--text);border-radius:12px;padding:0;font-size:14px;font-weight:500;width:44px;height:44px;display:flex;align-items:center;justify-content:center}
+.menu-btn{display:inline-flex;flex-direction:column;gap:3px;border:1px solid var(--border);background:var(--card);border-radius:12px;width:44px;height:44px;justify-content:center;align-items:center}
 .menu-btn .bar{width:18px;height:2px;background:var(--text)}
 @media(min-width:920px){.nav{display:flex}.menu-btn{display:none}}
 .backdrop{position:fixed;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(2px);opacity:0;pointer-events:none;transition:opacity .25s;z-index:70}
@@ -103,7 +103,7 @@ html,body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-se
 /* mobile refinements */
 @media(max-width:599px){
   .container{padding:0 20px}
-  .header-inner{padding:16px 0}
+  .header-inner{padding:16px 0;flex-wrap:nowrap}
   .page-hero{padding:64px 0 24px}
   .section{padding:60px 0}
   .features-grid{grid-template-columns:1fr;gap:20px}
@@ -113,14 +113,14 @@ html,body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-se
   .nav-drawer{width:100vw;padding:24px}
   .nav-drawer a{padding:14px 16px;font-size:15px}
   .drawer-close{width:40px;height:40px;font-size:18px}
-  .icon-btn,.lang-btn{padding:0;font-size:14px;width:32px;height:32px}
-  .menu-btn{width:32px;height:32px}
+  .icon-btn,.lang-btn{padding:0;font-size:14px;width:44px;height:44px}
+  .menu-btn{width:44px;height:44px}
   .menu-btn .bar{width:16px;height:2px}
 }
 
 @media(max-width:480px){
   .container{padding:0 16px}
-  .header-inner{padding:12px 0}
+  .header-inner{padding:12px 0;flex-wrap:nowrap}
   .page-hero{padding:56px 0 20px}
   .section{padding:48px 0}
   .features-grid{grid-template-columns:1fr;gap:16px}
@@ -130,8 +130,8 @@ html,body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-se
   .nav-drawer{width:100vw;padding:20px}
   .nav-drawer a{padding:12px 14px;font-size:14px}
   .drawer-close{width:36px;height:36px;font-size:16px}
-  .icon-btn,.lang-btn{padding:0;font-size:13px;width:28px;height:28px}
-  .menu-btn{width:28px;height:28px}
+  .icon-btn,.lang-btn{padding:0;font-size:13px;width:44px;height:44px}
+  .menu-btn{width:44px;height:44px}
   .menu-btn .bar{width:14px;height:2px}
   .brand-text{font-size:14px}
   .logo{width:24px;height:24px;font-size:12px}
