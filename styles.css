@@ -24,6 +24,7 @@ html,body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-se
 .nav-drawer a{display:block;width:100%;text-decoration:none;color:var(--text);padding:16px 20px;border-radius:16px;border:1px solid transparent;font-size:16px;font-weight:500}
 .nav-drawer a:hover{background:color-mix(in oklab,var(--surface) 70%,transparent);border-color:var(--border)}
 .drawer-close{align-self:flex-end;border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:12px;width:44px;height:44px;font-size:20px;font-weight:600}
+.drawer-actions{display:flex;gap:8px;margin-top:auto;padding-top:16px;border-top:1px solid var(--border)}
 .grid-2{display:grid;grid-template-columns:1fr;gap:28px}
 @media(min-width:920px){.grid-2{grid-template-columns:1.1fr .9fr;align-items:center}}
 .hero{padding:100px 0 60px;background:linear-gradient(180deg, color-mix(in oklab, var(--surface) 50%, transparent), transparent 60%)}
