@@ -5,7 +5,7 @@ html,body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-se
 .container h1{font-size:clamp(28px,4.2vw,44px);line-height:1.15;margin:0 0 12px}
 .container{max-width:1120px;margin:0 auto;padding:0 24px}
 .site-header{position:sticky;top:0;border-bottom:1px solid var(--border);backdrop-filter:saturate(180%) blur(10px);background:color-mix(in oklab, var(--bg) 88%, transparent);z-index:50}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:20px 24px}
 .brand{display:inline-flex;gap:10px;text-decoration:none;color:var(--text);font-weight:700}
 .brand-text{line-height:1;display:flex;align-items:center}
 .logo{display:grid;place-items:center;width:28px;height:28px;border-radius:8px;background:var(--primary);color:#fff;font-weight:700}
@@ -118,7 +118,7 @@ html,body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-se
 /* mobile refinements */
 @media(max-width:599px){
   .container{padding:0 24px}
-  .header-inner{padding:16px 0;flex-wrap:nowrap}
+  .header-inner{padding:16px 20px;flex-wrap:nowrap}
   .page-hero{padding:64px 0 24px}
   .section{padding:60px 0}
   .features-grid{grid-template-columns:1fr;gap:20px}
@@ -135,7 +135,7 @@ html,body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-se
 
 @media(max-width:480px){
   .container{padding:0 20px}
-  .header-inner{padding:12px 0;flex-wrap:nowrap}
+  .header-inner{padding:12px 16px;flex-wrap:nowrap}
   .page-hero{padding:56px 0 20px}
   .section{padding:48px 0}
   .features-grid{grid-template-columns:1fr;gap:16px}
