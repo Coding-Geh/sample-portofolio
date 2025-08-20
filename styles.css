@@ -104,7 +104,7 @@ html,body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-se
 
 /* mobile refinements */
 @media(max-width:599px){
-  .container{padding:0 20px}
+  .container{padding:0 24px}
   .header-inner{padding:16px 0;flex-wrap:nowrap}
   .page-hero{padding:64px 0 24px}
   .section{padding:60px 0}
@@ -121,7 +121,7 @@ html,body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-se
 }
 
 @media(max-width:480px){
-  .container{padding:0 16px}
+  .container{padding:0 20px}
   .header-inner{padding:12px 0;flex-wrap:nowrap}
   .page-hero{padding:56px 0 20px}
   .section{padding:48px 0}
